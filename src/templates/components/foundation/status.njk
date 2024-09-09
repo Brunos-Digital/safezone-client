@@ -1,0 +1,62 @@
+{% from "components/icon.njk" import icon %}
+
+{% set list = [
+  {
+    text: "Spamvertising Check",
+    status: "success"
+  },
+  {
+    text: "Blacklist Check",
+    status: "success"
+  },
+  {
+    text: "Spam Check",
+    status: "failed",
+    pro: true
+  },
+  {
+    text: "Server State",
+    status: "success"
+  },
+  {
+    text: "Malware Scan",
+    status: "success"
+  },
+  {
+    text: "Public Files",
+    status: "success"
+  },
+  {
+    text: "Content Safety",
+    status: "failed"
+  }
+] %}
+
+<div class="foundation-status">
+  <div class="foundation-status__list">
+    {% for item in list %}
+      <div data-result="{{ item.status }}" class="foundation-status__item" title="{{ item.text }}">
+        <div class="foundation-status__item-container">
+          <div class="foundation-status__item-number">
+            {{ loop.index }}
+          </div>
+          <div class="foundation-status__item-icon foundation-status__item-icon--success">
+            {{ icon("yes") }}
+          </div>
+          <div class="foundation-status__item-icon foundation-status__item-icon--failed">
+            {{ icon("info-outline") }}
+          </div>
+          <div class="foundation-status__item-icon foundation-status__item-icon--loading">
+            {{ icon("loading-2") }}
+          </div>
+        </div>
+        <div class="foundation-status__item-text">
+          {{ item.text }}
+        </div>
+        {% if item.pro %}
+          <a href="/" class="foundation-status__item-badge">PRO</a>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

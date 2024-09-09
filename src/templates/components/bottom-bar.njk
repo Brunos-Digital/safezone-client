@@ -1,0 +1,58 @@
+{% set list = [
+  {
+    text: "Cloud Protection:",
+    checked: true,
+    proFeature: true,
+    link: "/foundation-scanner.html"
+  },
+  {
+    text: "Firewall:",
+    checked: false,
+    proFeature: true,
+    link: "/foundation-firewall.html"
+  },
+  {
+    text: "Anti-Spam Engine:",
+    checked: true,
+    link: "/foundation-spam.html"
+  }
+] %}
+
+{% macro bottomBar(pro) %}
+  <div class="bottom-bar">
+    <div class="bottom-bar__list">
+      {% for item in list %}
+        <div class="bottom-bar__item">
+          <div class="bottom-bar__item-content">
+            <span class="bottom-bar__item-text">
+              {{ item.text }}
+            </span>
+            {% if pro or not item.proFeature %}
+              <a href="{{ item.link }}" class="form-check form-switch form-switch-sm form-check-reverse">
+                <span class="form-check-label">
+                  {% if item.checked %}
+                    Active
+                  {% else %}
+                    Disabled
+                  {% endif %}
+                </span>
+                <input disabled class="form-check-input" type="checkbox" aria-label="state" role="switch"{% if item.checked %} checked{% endif %}>
+              </a>
+              {% else %}
+                <a href="/" class="bottom-bar__item-badge">
+                  pro
+                </a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <a href="/" class="bottom-bar__version">
+      {% if pro %}
+        Pro Version
+        {% else %}
+        Free Version
+      {% endif %}
+    </a>
+  </div>
+{% endmacro %}

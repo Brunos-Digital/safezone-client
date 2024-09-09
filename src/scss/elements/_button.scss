@@ -1,0 +1,161 @@
+.btn {
+  --statu-btn-padding-x: 16px;
+  --statu-btn-padding-y: 10px;
+  --statu-btn-font-size: 14px;
+  --statu-btn-font-weight: 600;
+  --statu-btn-line-height: 18px;
+  --statu-btn-border-radius: 8px;
+
+  color: var(--statu-btn-color) !important;
+  box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05) !important;
+  letter-spacing: -0.32px;
+  outline: none !important;
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+
+    .icon {
+      transition: all 300ms;
+      font-size: 14px;
+    }
+  }
+
+  // Colors
+  &-blue-40 {
+    --statu-btn-color: #fff;
+    --statu-btn-hover-color: #fff;
+    --statu-btn-active-color: #fff;
+    --statu-btn-disabled-color: #fff;
+
+    .icon {
+      color: #fff;
+    }
+  }
+  &-blue-50 {
+    --statu-btn-color: #fff;
+    --statu-btn-hover-color: #fff;
+    --statu-btn-active-color: #fff;
+    --statu-btn-disabled-color: #fff;
+
+    .icon {
+      color: #fff;
+    }
+  }
+  &-blue-5 {
+    --statu-btn-color: #{$color-blue-50};
+    --statu-btn-hover-color: #{$color-blue-50};
+    --statu-btn-active-color: #{$color-blue-50};
+    --statu-btn-disabled-color: #{$color-blue-50};
+    --statu-btn-border-color: #DCE8F4;
+    --statu-btn-bg: #DCE8F4;
+
+    .icon {
+      color: #{$color-blue-50};
+    }
+  }
+  &-gray-2 {
+    --statu-btn-color: #{$color-gray-80};
+    --statu-btn-hover-color: #{$color-gray-80};
+    --statu-btn-active-color: #{$color-gray-80};
+    --statu-btn-disabled-color: #{$color-gray-80};
+  }
+  &-gray-0 {
+    --statu-btn-color: #{$color-gray-40};
+    --statu-btn-hover-color: #{$color-gray-80};
+    --statu-btn-active-color: #{$color-gray-80};
+    --statu-btn-disabled-color: #{$color-gray-40};
+    --statu-btn-border-color: #{$color-gray-2};
+  }
+
+  &-white {
+    --statu-btn-color: #{$color-gray-100};
+    --statu-btn-hover-color: #{$color-gray-100};
+    --statu-btn-active-color: #{$color-gray-100};
+    --statu-btn-disabled-color: #{$color-gray-100};
+    --statu-btn-hover-bg: #{$color-gray-0};
+    --statu-btn-hover-border-color: #{$color-gray-2};
+    --statu-btn-active-border-color: #{$color-gray-2};
+    --statu-btn-disabled-border-color: #{$color-gray-2};
+    --statu-btn-border-color: #{$color-gray-2};
+  }
+  &-cancel {
+    --statu-btn-color: #{$color-gray-40};
+    --statu-btn-hover-color: #{$color-gray-40};
+    --statu-btn-active-color: #{$color-gray-40};
+    --statu-btn-disabled-color: #{$color-gray-40};
+    --statu-btn-hover-bg: #{$color-gray-0};
+    --statu-btn-hover-border-color: #{$color-gray-5};
+    --statu-btn-active-border-color: #{$color-gray-5};
+    --statu-btn-disabled-border-color: #{$color-gray-5};
+    --statu-btn-border-color: #{$color-gray-5};
+
+    box-shadow: 0px -1px 2px 0px rgba(0, 0, 0, 0.04) inset !important;
+  }
+
+  &:hover {
+    color: var(--statu-btn-hover-color) !important;
+  }
+  &:active {
+    color: var(--statu-btn-active-color) !important;
+  }
+  &:disabled {
+    color: var(--statu-btn-disabled-color) !important;
+  }
+
+  // Sizes
+  &-lg {
+    --statu-btn-padding-x: 16px;
+    --statu-btn-padding-y: 10px;
+    --statu-btn-font-size: 16px;
+    --statu-btn-font-weight: 600;
+    --statu-btn-line-height: 22px !important;
+    --statu-btn-border-radius: 8px;
+  }
+
+  //States
+  &-loading {
+    position: relative;
+    pointer-events: none;
+    color: transparent !important;
+
+    .icon {
+      opacity: 0;
+    }
+
+    &:hover {
+      color: transparent !important;
+    }
+    &:disabled {
+      color: transparent !important;
+    }
+    &:active {
+      color: transparent !important;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 18px;
+      height: 18px;
+      background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M34.1422 5.85787L30.9993 9.00056C28.1844 6.18556 24.2956 4.44444 20 4.44444C11.4089 4.44444 4.44444 11.4089 4.44444 20C4.44444 28.5911 11.4089 35.5556 20 35.5556C28.5911 35.5556 35.5556 28.5911 35.5556 20H40C40 31.0458 31.0458 40 20 40C8.95431 40 0 31.0458 0 20C0 8.95431 8.95431 0 20 0C25.5229 0 30.5229 2.23858 34.1422 5.85787Z' fill='white'/%3E%3C/svg%3E%0A");
+      background-size: 18px;
+      background-repeat: no-repeat;
+      background-position: center;
+      left: calc(50% - 8px);
+      animation: spin 1.2s linear infinite;
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+}

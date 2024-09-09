@@ -1,0 +1,35 @@
+{% from "components/icon.njk" import icon %}
+
+{% set list = [
+  {
+    link: "/",
+    text: "Quick Start Guide"
+  },
+  {
+    link: "/",
+    text: "Configuration Manual"
+  },
+  {
+    link: "/",
+    text: "Update Instructions"
+  }
+] %}
+
+<div class="sz-card">
+  <div class="sz-card-documentations">
+    <div class="sz-card-documentations__heading">
+      {{ icon("book-2") }}
+      WP Safe Zone Documentation
+    </div>
+    <div class="sz-card-documentations__list">
+      {% for item in list %}
+        <a href="{{ item.link }}" class="sz-card-documentations__item">
+          <span class="sz-card-documentations__item-icon">
+            {{ icon("arrow-right-alt") }}
+          </span>
+          <span class="sz-card-documentations__item-text">{{ item.text }}</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

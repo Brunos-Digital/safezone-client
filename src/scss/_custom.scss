@@ -1,0 +1,38 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+}
+
+a:focus {
+  outline: none !important;
+}
+
+:has(.app) {
+  min-height: var(--app-height);
+  background: $color-gray-2;
+}
+
+//WORDPRESS
+#wpwrap {
+  min-height: unset !important;
+}
+#adminmenu {
+  div.wp-menu-image {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      padding: 0 !important;
+      margin: auto !important;
+      opacity: 1 !important;
+    }
+    &::before {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

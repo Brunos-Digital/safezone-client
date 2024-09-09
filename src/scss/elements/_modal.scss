@@ -1,0 +1,155 @@
+.modal {
+  z-index: 9991;
+  --statu-modal-width: 518px;
+
+  &-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &__title {
+      color: $color-gray-100;
+      font-size: 16px;
+      font-weight: 640;
+      line-height: 24px;
+      letter-spacing: -0.3px;
+    }
+    &__text {
+      color: $color-gray-40;
+      font-size: 14px;
+      font-weight: 440;
+      line-height: 20px;
+      letter-spacing: -0.32px;
+    }
+  }
+  &-container {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    border-radius: 16px;
+    background: #fff;
+    width: 100%;
+    pointer-events: auto;
+    position: relative;
+    gap: 24px;
+  }
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+  &-actions {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+
+    &--column {
+      flex-direction: column;
+
+      & > * {
+        width: 100%;
+      }
+    }
+    &--row {
+      flex-direction: row;
+
+      & > * {
+        flex: 1;
+      }
+    }
+    &--left {
+      justify-content: flex-start;
+
+      & > * {
+        flex: unset;
+        min-width: 138px;
+      }
+    }
+    &--right {
+      justify-content: flex-end;
+
+      & > * {
+        flex: unset;
+        min-width: 138px;
+      }
+    }
+    &--center {
+      justify-content: center;
+    }
+    &--fill {
+      & > * {
+        flex: 1;
+      }
+    }
+
+    & > * {
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+    }
+  }
+  &-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    top: 16px;
+    right: 16px;
+    height: 40px;
+    width: 40px;
+    border-radius: 99px;
+    border: 1px solid $color-gray-2 !important;
+    background: #FFF !important;
+    box-shadow: 0px -1px 2px 0px rgba(16, 24, 40, 0.05) inset !important;
+    outline: none !important;
+    padding: 0;
+    transition: all 300ms;
+
+    .icon {
+      color: $color-gray-30;
+      font-size: 24px;
+      transition: all 300ms;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: calc(100% + 10px);
+      width: calc(100% + 10px);
+      top: -5px;
+      left: -5px;
+    }
+
+    &:hover {
+      background: $color-gray-0 !important;
+
+      .icon {
+        color: $color-gray-50;
+      }
+    }
+  }
+
+  &-fullscreen {
+
+    .modal-container {
+      height: 100%;
+      border-radius: 0;
+    }
+    .modal-inner {
+      height: 100%;
+    }
+  }
+}
+.modal-backdrop {
+  z-index: 9990;
+
+  &.show {
+    --statu-backdrop-opacity: 0.24;
+  }
+}

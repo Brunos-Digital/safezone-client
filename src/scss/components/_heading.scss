@@ -1,0 +1,53 @@
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  &__title {
+    color: $color-gray-100;
+    font-size: 32px;
+    font-weight: 480;
+    line-height: 44px;
+    letter-spacing: -0.64px;
+  }
+  &__version {
+    color: $color-gray-20;
+    font-size: 16px;
+    font-weight: 480;
+    letter-spacing: -0.4px;
+  }
+  &__protection {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    .icon {
+      font-size: 14px;
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: -0.32px;
+    }
+
+    &--warning {
+      .icon {
+        color: $color-warning-500;
+      }
+
+      span {
+        color: $color-warning-500;
+      }
+    }
+    &--success {
+      .icon {
+        color: $color-success-400;
+      }
+
+      span {
+        color: $color-success-400;
+      }
+    }
+  }
+}

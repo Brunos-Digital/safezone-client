@@ -1,0 +1,32 @@
+{% extends "layouts/default.njk" %}
+{% from "components/tab-menu.njk" import tabMenu %}
+{% from "components/badge.njk" import badge %}
+{% from "components/icon.njk" import icon %}
+{% from "components/sidebar.njk" import sidebar %}
+{% from "components/cards/info.njk" import infoCard %}
+{% from "components/bottom-bar.njk" import bottomBar %}
+
+{% set headingProtection = {text:"Providing full protection", color:"success"} %}
+
+{% block main %}
+  <div class="home">
+    {% call tabMenu(home.tabMenu, bottom=true, selected="dashboard") %}
+      <div class="home__cards">
+        {{ infoCard(value="8", avatar="lock", title="Blocked activities", text="Last update: 23:45", select=["Today", "Today"]) }}
+        {{ infoCard(value="6", avatar="lock", title="Blocked spams", text="Last update: 23:45", select=["Today", "Today"]) }}
+        {{ infoCard(value="4.5<span class='fw-light'>/5</span>", avatar="yes-alt", title="Scan report", text="Last scan: 14:57", link={text: "See Results", color: "blue", to:"/"}) }}
+        {{ infoCard(value="1", avatar="update", title="Pending update", text="New update is available", link={text: "Update", color: "blue", to:"/"}) }}
+      </div>
+    {% endcall %}
+    {% include "components/home/chart.njk" %}
+    {{ bottomBar() }}
+  </div>
+{% endblock %}
+
+{% block sidebar %}
+  {% call sidebar() %}
+    {% include "components/cards/upgrade.njk" %}
+    {% include "components/cards/documentations.njk" %}
+    {% include "components/cards/guidance.njk" %}
+  {% endcall %}
+{% endblock %}

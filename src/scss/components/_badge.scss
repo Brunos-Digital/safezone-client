@@ -1,0 +1,92 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  gap: 8px;
+  border-radius: 86px;
+  box-shadow: 0 1px 2px 0 rgba(213, 78, 33, 0.05), 0 4px 4px 0 rgba(255, 255, 255, 0.16) inset;
+
+  &__dot {
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+  }
+  &__text {
+    font-size: 14px;
+    font-weight: 440;
+    letter-spacing: -0.32px;
+    line-height: 18px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+
+  &--error {
+    border: 1px solid rgba(251, 197, 169, 0.32);
+    background: #FEF0E9;
+  }
+  &--error & {
+    &__dot {
+      background: $color-error-500;
+    }
+    &__text {
+      color: $color-error-500;
+    }
+  }
+
+  &--gray {
+    border: 1px solid #DCDCDE;
+    background: $color-gray-2;
+  }
+  &--gray & {
+    &__dot {
+      background: $color-gray-70;
+    }
+    &__text {
+      color: $color-gray-70;
+    }
+  }
+
+  &--warning {
+    border: 1px solid rgba(255, 227, 153, 0.32);
+    background: #FFF8E5;
+  }
+  &--warning & {
+    &__dot {
+      background: #EE8E0D;
+    }
+    &__text {
+      color: #EE8E0D;
+    }
+  }
+
+  &--success {
+    border: 1px solid rgba(171, 251, 169, 0.32);
+    background: $color-success-25;
+    box-shadow: 0px 1px 2px 0px rgba(49, 132, 63, 0.05), 0px 4px 4px 0px rgba(255, 255, 255, 0.16) inset;
+  }
+  &--success & {
+    &__dot {
+      background: $color-success-500;
+    }
+    &__text {
+      color: $color-success-500;
+    }
+  }
+
+  &--blue {
+    border: 1px solid transparent;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.72) 0%, rgba(255, 255, 255, 0.72) 100%), #C5D9ED;
+  }
+  &--blue & {
+    &__dot {
+      background: $color-blue-50;
+    }
+    &__text {
+      color: $color-blue-50;
+    }
+  }
+}

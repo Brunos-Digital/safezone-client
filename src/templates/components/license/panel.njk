@@ -1,0 +1,52 @@
+{% from "components/icon.njk" import icon %}
+{% from "components/dialog.njk" import dialog %}
+
+{% macro licensePanel(title="License Key", description="If you have the key you can activate your Safe Zone Pro license manually.", active, list=license.list) %}
+  <div class="license-panel">
+    <div class="license-panel__heading">
+      <div class="license-panel__heading-icon">
+        {{ icon("admin-network") }}
+      </div>
+      <div class="license-panel__heading-content">
+        <div class="license-panel__heading-title">{{ title }}</div>
+        <div class="license-panel__heading-text">{{ description }}</div>
+      </div>
+    </div>
+    {% if not active %}
+      <div class="license-panel__form">
+        <div class="license-panel__form-title">License Key</div>
+        <form action="#" class="license-panel__form-entry">
+          <div class="license-panel__form-input">
+            <label class="input-group">
+          <span class="input-group-icon">
+            {{ icon("admin-network") }}
+          </span>
+              <input type="text" class="form-control" aria-label="search">
+            </label>
+            <div class="license-panel__form-help">
+              {{ icon("info") }}
+              Enter plugin’s license key to proceed.
+            </div>
+          </div>
+          <button class="btn btn-blue-40" type="submit">Active License</button>
+        </form>
+      </div>
+    {% else %}
+      <div class="license-panel__details">
+        {% for item in list %}
+          <div class="license-panel__detail">
+            <div class="license-panel__detail-title">{{ item.title }}</div>
+            <div class="license-panel__detail-value">{{ item.value | safe }}</div>
+          </div>
+        {% endfor %}
+      </div>
+      <button class="btn btn-gray-0 mt-3 ms-auto" data-bs-toggle="modal" data-bs-target="#denemedeneme">
+        Cancel License
+      </button>
+      {% call dialog(id="denemedeneme", iconName="remove", title="License Cancellation", description="Are you sure you want to cancel your WP Safe Zone license? <strong>This action can’t be undone.</strong>", color="red", closeButton="true", actionDirection="column") %}
+        <a href="/" class="btn btn-lg btn-error-500">Cancel My License</a>
+        <button class="btn btn-cancel btn-lg" data-bs-dismiss="modal">Close</button>
+      {% endcall %}
+    {% endif %}
+  </div>
+{% endmacro %}

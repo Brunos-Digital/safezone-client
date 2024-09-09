@@ -1,0 +1,52 @@
+{% extends "layouts/default.njk" %}
+{% from "components/tab-menu.njk" import tabMenu %}
+{% from "components/badge.njk" import badge %}
+{% from "components/icon.njk" import icon %}
+{% from "components/sidebar.njk" import sidebar %}
+{% from "components/cards/info.njk" import infoCard %}
+{% from "components/cards/order.njk" import orderCard %}
+
+{% set headingProtection = {text:"Providing full protection", color:"success"} %}
+{% set activity = {
+  title: "IPs with the most activity",
+  text: "Based on last 24 hours",
+  list: [
+    {
+      value: "245.252.75.94",
+      text: "9 Actions"
+    },
+    {
+      value: "245.252.75.94",
+      text: "4 Actions"
+    },
+    {
+      value: "245.252.75.94",
+      text: "4 Actions"
+    },
+    {
+      value: "245.252.75.94",
+      text: "3 Actions"
+    },
+    {
+      value: "245.252.75.94",
+      text: "2 Actions"
+    }
+  ]
+} %}
+
+{% block main %}
+  <div class="page">
+    {% call tabMenu(home.tabMenu, bottom=true, selected="events") %}
+      {% include "components/actions.njk" %}
+    {% endcall %}
+    {% include "components/events/datatable.njk" %}
+  </div>
+{% endblock %}
+
+{% block sidebar %}
+  {% call sidebar() %}
+    {{ orderCard(title=activity.title, text=activity.text, list=activity.list) }}
+    {{ infoCard(value="8", avatar="lock", title="Blocked activities", text="Last update: 23:45", select=["Today", "Today"]) }}
+    {{ infoCard(value="4", avatar="lock", title="Blocked attemps", text="Last update: 23:45", select=["Today", "Today"]) }}
+  {% endcall %}
+{% endblock %}

@@ -1,0 +1,22 @@
+{
+  "name": "bower",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "static",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "bootstrap": "5.2.1",
+    "echarts": "StatuAgency/Packages#echarts"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.bundle.min.js"
+      ]
+    }
+  }
+}

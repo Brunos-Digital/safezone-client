@@ -1,0 +1,23 @@
+{% extends "layouts/default.njk" %}
+{% from "components/tab-menu.njk" import tabMenu %}
+{% from "components/sidebar.njk" import sidebar %}
+{% from "components/cards/order.njk" import orderCard %}
+
+{% set headingProtection = {text:"Providing normal protection", color:"warning"} %}
+
+{% block main %}
+  <div class="page">
+    {% call tabMenu(home.tabMenu, bottom=true, selected="logs") %}
+      {% include "components/actions.njk" %}
+    {% endcall %}
+    {% include "components/logs-page/datatable.njk" %}
+  </div>
+{% endblock %}
+
+{% block sidebar %}
+  {% call sidebar() %}
+    {% include "components/cards/upgrade.njk" %}
+    {% include "components/cards/documentations.njk" %}
+    {% include "components/cards/guidance.njk" %}
+  {% endcall %}
+{% endblock %}

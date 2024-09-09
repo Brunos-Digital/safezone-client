@@ -1,0 +1,13 @@
+{% extends "layouts/default.njk" %}
+{% from "components/tab-menu.njk" import tabMenu %}
+{% from "components/license/panel.njk" import licensePanel %}
+
+{% set headingProtection = {text:"Providing full protection", color:"success"} %}
+
+{% block fluid %}
+  <div class="page">
+    {% call tabMenu(license.tabMenu, selected="license") %}{% endcall %}
+    {% include "components/get-pro-banner.njk" %}
+    {{ licensePanel() }}
+  </div>
+{% endblock %}

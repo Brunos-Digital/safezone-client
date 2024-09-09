@@ -1,0 +1,16 @@
+<div class="changelog-versions">
+  {% for item in changelog.list %}
+    <div class="changelog-versions__item">
+      <div class="changelog-versions__item-heading">
+        <div class="changelog-versions__item-version">{{ item.version }}</div>
+        <div class="changelog-versions__item-line"></div>
+        <div class="changelog-versions__item-date">{{ item.date }}</div>
+      </div>
+      <ul class="changelog-versions__item-list">
+        {% for text in item.list %}
+          <li>{{ text }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</div>

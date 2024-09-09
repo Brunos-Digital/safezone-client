@@ -1,0 +1,63 @@
+{% from "components/icon.njk" import icon %}
+
+{% macro settingsForm(list, back) %}
+  <form action="#" class="settings-form">
+    <div class="settings-form__list">
+      {% for item in list %}
+        <div class="settings-form__item">
+          <div class="settings-form__item-content">
+            <div class="settings-form__item-title">
+              {{ item.title }}
+              {% if item.proFeature %}
+                <a href="/" class="settings-form__item-badge">pro</a>
+              {% endif %}
+            </div>
+            <div class="settings-form__item-description">{{ item.description }}</div>
+          </div>
+          {% if not item.radios %}
+            <label class="form-switch">
+              <input {% if item.disabled %}disabled{% endif %} class="form-check-input" type="checkbox" role="switch"{% if item.checked %} checked{% endif %}>
+            </label>
+          {% endif %}
+          {% if item.radios %}
+            <div class="settings-form__item-radios">
+              {% for radio in item.radios.list %}
+                <label class="form-check">
+                  <input {% if radio.checked %}checked{% endif %} class="form-check-input" type="radio" name="settings-{{ item.radios.name }}" >
+                  <span class="form-check-label">
+                  {{ radio.text }}
+                </span>
+                </label>
+              {% endfor %}
+            </div>
+          {% endif %}
+          {% if item.select %}
+            <select class="form-select ms-xl-14 ms-md-5" aria-label="Settings select">
+              <option selected disabled>{{ item.select.placeholder }}</option>
+              {% for select in item.select.list %}
+                <option value="{{ loop.index }}">{{ select }}</option>
+              {% endfor %}
+            </select>
+          {% endif %}
+          {% if item.input %}
+            <div class="input-group ms-lg-6">
+              {% if item.input.icon %}
+                <span class="input-group-icon">
+                  {{ icon("saved") }}
+                </span>
+              {% endif %}
+              <input type="{% if item.input.type %}{{ item.input.type }}{% else %}text{% endif %}" class="form-control" placeholder="{{ item.input.placeholder }}" aria-label="entry">
+            </div>
+          {% endif %}
+          {% if item.text %}
+            <div class="settings-form__item-text">{{ item.text | safe }}</div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="settings-form__actions">
+      <a href="{{ back or "/" }}" class="btn btn-white">Cancel</a>
+      <button type="submit" class="btn btn-blue-40">Save Changes</button>
+    </div>
+  </form>
+{% endmacro %}

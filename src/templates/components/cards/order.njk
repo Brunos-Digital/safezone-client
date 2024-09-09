@@ -1,0 +1,18 @@
+{% macro orderCard(title, text, list, reverse) %}
+  <div class="sz-card">
+    <div class="sz-card-order">
+      <div class="sz-card-order__heading">
+        <div class="sz-card-order__heading-title">{{ title }}</div>
+        <div class="sz-card-order__heading-text">{{ text }}</div>
+      </div>
+      <div class="sz-card-order__list{% if reverse %} sz-card-order__list--reverse{% endif %}">
+        {% for item in list %}
+          <div class="sz-card-order__item">
+            <a href="{{ item.link or "/" }}" class="sz-card-order__item-value shadow-none">{{ item.value | safe }}</a>
+            <span class="sz-card-order__item-text">{{ item.text | safe }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endmacro %}

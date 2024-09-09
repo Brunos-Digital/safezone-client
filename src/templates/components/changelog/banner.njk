@@ -1,0 +1,17 @@
+{% from "components/icon.njk" import icon %}
+{% from "components/badge.njk" import badge %}
+
+<div class="changelog-banner">
+  <div class="changelog-banner__container">
+    <div class="changelog-banner__icon">
+      {{ icon("update-alt") }}
+    </div>
+    <div class="changelog-banner__content">
+      <div class="changelog-banner__content-title">Changelog</div>
+      <div class="changelog-banner__content-text">See the latest updates and fixes</div>
+    </div>
+  </div>
+  <div class="changelog-banner__badge">
+    {{ badge(dot=true, text="Current Version: 1.0.3", color="blue") }}
+  </div>
+</div>

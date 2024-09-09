@@ -1,0 +1,17 @@
+{% from "components/icon.njk" import icon %}
+
+<div class="license-banner">
+  <div class="license-banner__content">
+    <div class="license-banner__icon">
+      {{ icon("saved") }}
+    </div>
+    <div class="license-banner__title">License Successfully Activated</div>
+    <div class="license-banner__text">Thank you for the purchase, you can start using Safe Zone with all its features.</div>
+  </div>
+  <button class="license-banner__close" data-license-banner-close aria-label="close banner">
+    {{ icon("no") }}
+  </button>
+  <div class="license-banner__effect">
+    <img draggable="false" src="/images/circle-effect.svg" alt="effect">
+  </div>
+</div>

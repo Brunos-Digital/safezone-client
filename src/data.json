@@ -1,0 +1,1065 @@
+{
+  "home": {
+    "tabMenu": [
+      {
+        "slug": "dashboard",
+        "text": "Dashboard",
+        "link": "/"
+      },
+      {
+        "slug": "events",
+        "text": "Events",
+        "link": "/events.html"
+      },
+      {
+        "slug": "lockouts",
+        "text": "Lockouts",
+        "link": "/lockouts.html"
+      },
+      {
+        "slug": "whitelist",
+        "text": "IP Whitelist",
+        "link": "/whitelist.html"
+      },
+      {
+        "slug": "logs",
+        "text": "Logs",
+        "link": "/logs.html"
+      }
+    ]
+  },
+  "license": {
+    "tabMenu": [
+      {
+        "slug": "license",
+        "text": "License",
+        "link": "/license"
+      },
+      {
+        "slug": "changelog",
+        "text": "Changelog",
+        "link": "/changelog"
+      }
+    ],
+    "list": [
+      {
+        "title": "License Key",
+        "value": "<mark>TEM8S2-2ET83-CGKP1-DPSI2-EPZO1</mark>"
+      },
+      {
+        "title": "Product",
+        "value": "WP Safe Zone Plugin – Pro Version"
+      },
+      {
+        "title": "Status",
+        "value": "<span class='active'>Active</span>"
+      },
+      {
+        "title": "Start Date",
+        "value": "April 12th, 2024 – 18:30"
+      },
+      {
+        "title": "Expiry Date",
+        "value": "April 12th, 2024 – 18:30"
+      },
+      {
+        "title": "Installs",
+        "value": "1 out of 1"
+      }
+    ]
+  },
+  "changelog": {
+    "tabMenu": [
+      {
+        "slug": "license",
+        "text": "License",
+        "link": "/license"
+      },
+      {
+        "slug": "changelog",
+        "text": "Changelog",
+        "link": "/changelog"
+      }
+    ],
+    "list": [
+      {
+        "version": "1.0.3",
+        "date": "June 30, 2024",
+        "list": [
+          "Added a comprehensive security dashboard for quick overview and management.",
+          "Implemented IP whitelisting feature for secure access control.",
+          "Ensured full compatibility with the latest WordPress version."
+        ]
+      },
+      {
+        "version": "1.0.2",
+        "date": "June 30, 2024",
+        "list": [
+          "Added a comprehensive security dashboard for quick overview and management.",
+          "Implemented IP whitelisting feature for secure access control."
+        ]
+      },
+      {
+        "version": "1.0.1",
+        "date": "June 30, 2024",
+        "list": [
+          "Added a comprehensive security dashboard for quick overview and management.",
+          "Implemented IP whitelisting feature for secure access control.",
+          "Ensured full compatibility with the latest WordPress version.",
+          "Launched WP Safe Zone, the ultimate security plugin for WordPress."
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "tabMenu": [
+      {
+        "slug": "firewall",
+        "text": "Firewall",
+        "link": "/settings-firewall.html"
+      },
+      {
+        "slug": "spam",
+        "text": "Anti-Spam",
+        "link": "/settings-spam.html"
+      },
+      {
+        "slug": "scanner",
+        "text": "Malware Scanner",
+        "link": "/settings-scanner.html"
+      },
+      {
+        "slug": "notifications",
+        "text": "Notifications",
+        "link": "/settings-notifications.html"
+      },
+      {
+        "slug": "license",
+        "text": "License",
+        "link": "/settings-license.html"
+      },
+      {
+        "slug": "changelog",
+        "text": "Changelog",
+        "link": "/settings-changelog.html"
+      }
+    ],
+    "firewall": {
+      "heading": {
+        "title": "Firewall Settings",
+        "text": "Edit firewall settings and authorization",
+        "avatar": "email-close"
+      },
+      "form": [
+        {
+          "title": "Disable Embeds",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true,
+          "disabled": true,
+          "proFeature": true
+        },
+        {
+          "title": "Disable XML/RPC",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "Remove jQuery Migrate",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "Hide WP Version",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": false
+        },
+        {
+          "title": "Disable Self Pingbacks",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "Disable REST API",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "Remove REST API Links",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "Ignore Logged in Users",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "SQL-Injection Check",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "XSS Check",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "Check Plugins While Uploading",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "Check Themes While Uploading",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "Check for Known Exploits",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        }
+      ]
+    },
+    "antiSpam": {
+      "heading": {
+        "title": "Anti-Spam Settings",
+        "text": "Edit anti-spam settings and authorization",
+        "avatar": "email-close"
+      },
+      "form": [
+        {
+          "title": "Disable Self Pingbacks",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "Remove Comment URLs",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "Disable Heartbeat",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": false
+        },
+        {
+          "title": "Custom Login URL",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true,
+          "input": {
+            "placeholder": "Enter the URL"
+          }
+        },
+        {
+          "title": "Two-factor Authentication (2FA)",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "Protect Woocommerce Payment Forms",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "Protect Contact Forms",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "Remove RSD Link",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "Remove Shortlink",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "Disable RSS Feeds",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "Remove RSS Feed Links",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "Remove wlwmanifest.xml Link",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        }
+      ]
+    },
+    "malwareScanner": {
+      "heading": {
+        "title": "Malware Scanner Settings",
+        "text": "Brute-force attack migitation and user authentication settings",
+        "avatar": "email-close"
+      },
+      "form": [
+        {
+          "title": "Agressive Search",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true,
+          "text": "Toggle off to return to normal scanning"
+        },
+        {
+          "title": "Enable Autoscanning & Schedule",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "Schedule Autoscanning ",
+          "description": "Select an interval for automatic scanning",
+          "radios": {
+            "name": "scheduleRadio",
+            "list": [
+              {
+                "text": "Monthly",
+                "checked": true
+              },
+              {
+                "text": "Weekly"
+              },
+              {
+                "text": "Daily"
+              }
+            ]
+          },
+          "select": {
+            "placeholder": "Select scan time",
+            "list": ["10:00","18:00","03:00"]
+          }
+        },
+        {
+          "title": "Set the Time When the Autoscanning Starts",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "Important File Monitoring",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": false
+        },
+        {
+          "title": "Scan HTML Code",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "Heuristic Analysis",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "Set Custom Scan Pat",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        }
+      ]
+    },
+    "notifications": {
+      "heading": {
+        "title": "Notifications",
+        "text": "Edit firewall settings and authorization",
+        "avatar": "email-close"
+      },
+      "form": [
+        {
+          "title": "Enable Firewall",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true
+        },
+        {
+          "title": "Block Bad Bots",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true,
+          "text": "Ban bad bots from IP automatically"
+        },
+        {
+          "title": "Login Protection",
+          "description": "Curabitur viverra volutpat quam et tempus.",
+          "checked": true,
+          "text": "Secure <a href='/' class=\"shadow-none\">wp-admin.php</a>"
+        }
+      ]
+    }
+  },
+  "foundation": {
+    "malwareScanner": {
+      "table": {
+        "head": [
+          {
+            "width": "auto",
+            "text": "Results <span class=\"text-gray-30\">(4967 files scanned)</span>"
+          },
+          {
+            "width": "156px",
+            "text": "State"
+          },
+          {
+            "width": "156px",
+            "text": "Found Date"
+          }
+        ],
+        "list": [
+          {
+            "text": "The file <b>'malware.php'</b> has been detected as malicious; immediate action is advised to remove or replace it to ensure the security of your WordPress application.",
+            "state": {
+              "dot": true,
+              "text": "Critical",
+              "color": "error"
+            },
+            "date": "09 March 2023, 6:34:24 PM"
+          },
+          {
+            "text": "The file <b>'malicious-code.php'</b> contains harmful content and poses a security risk to your WordPress site. It is recommended to remove or replace this file immediately.",
+            "state": {
+              "dot": true,
+              "text": "Critical",
+              "color": "error"
+            },
+            "date": "09 March 2023, 6:34:24 PM"
+          },
+          {
+            "text": "A phishing attempt was detected in <b>'phishing-script.js'</b> posing a risk to user security. Remove or replace the file to prevent potential data breaches.",
+            "state": {
+              "dot": true,
+              "text": "Update",
+              "color": "error"
+            },
+            "date": "09 March 2023, 6:34:24 PM"
+          },
+          {
+            "text": "A spam bot was found in <b>'spam-bot.php'</b> posing a risk of unwanted activities. Remove or replace the file promptly to maintain the integrity of your WordPress site.",
+            "state": {
+              "dot": true,
+              "text": "Warning",
+              "color": "warning"
+            },
+            "date": "09 March 2023, 6:34:24 PM"
+          },
+          {
+            "text": "The plugin <b class='text-blue-50'>FoxReader</b> is in need of an update.",
+            "state": {
+              "dot": true,
+              "text": "Fixed",
+              "color": "success"
+            },
+            "date": "09 March 2023, 6:34:24 PM"
+          }
+        ]
+      }
+    },
+    "antiSpam": {
+      "table": {
+        "head": [
+          {
+            "width": "auto",
+            "text": "Content <span class=\"text-gray-30\">(49 spams)</span>"
+          },
+          {
+            "minWidth": "156px",
+            "text": "IP Address"
+          },
+          {
+            "minWidth": "156px",
+            "text": "Type"
+          },
+          {
+            "minWidth": "156px",
+            "text": "Country"
+          },
+          {
+            "minWidth": "156px",
+            "text": "Blocked Date"
+          }
+        ],
+        "list": [
+          {
+            "text": "Come and join my crypto journey: https://www.domain.com/crypto",
+            "ipAddress": "185.119.71.104",
+            "type": {
+              "icon": "wordpress",
+              "text": "Comment"
+            },
+            "lang": {
+              "flag": "/images/flags/TR.svg",
+              "name": "Turkey"
+            },
+            "date": "09 March 2023, 6:34:24 PM"
+          },
+          {
+            "text": "blacklist",
+            "ipAddress": "185.119.71.104",
+            "type": {
+              "icon": "wordpress",
+              "text": "Comment"
+            },
+            "lang": {
+              "flag": "/images/flags/TR.svg",
+              "name": "Turkey"
+            },
+            "date": "09 March 2023, 6:34:24 PM"
+          },
+          {
+            "text": "Come and join my crypto journey: https://www.domain.com/crypto",
+            "ipAddress": "185.119.71.104",
+            "type": {
+              "icon": "wordpress",
+              "text": "Comment"
+            },
+            "lang": {
+              "flag": "/images/flags/TR.svg",
+              "name": "Turkey"
+            },
+            "date": "09 March 2023, 6:34:24 PM"
+          },
+          {
+            "text": "Come and join my crypto journey: https://www.domain.com/crypto",
+            "ipAddress": "185.119.71.104",
+            "type": {
+              "icon": "wordpress",
+              "text": "Comment"
+            },
+            "lang": {
+              "flag": "/images/flags/TR.svg",
+              "name": "Turkey"
+            },
+            "date": "09 March 2023, 6:34:24 PM"
+          },
+          {
+            "text": "Come and join my crypto journey: https://www.domain.com/crypto",
+            "ipAddress": "185.119.71.104",
+            "type": {
+              "icon": "wordpress",
+              "text": "Comment"
+            },
+            "lang": {
+              "flag": "/images/flags/TR.svg",
+              "name": "Turkey"
+            },
+            "date": "09 March 2023, 6:34:24 PM"
+          }
+        ]
+      }
+    }
+  },
+  "events": {
+    "table": {
+      "head": [
+        {
+          "width": "152px",
+          "text": "IP Address"
+        },
+        {
+          "minWidth": "118px",
+          "text": "Country"
+        },
+        {
+          "minWidth": "150px",
+          "text": "Hostname"
+        },
+        {
+          "minWidth": "145px",
+          "text": "Date"
+        },
+        {
+          "width": "auto",
+          "text": "Event"
+        },
+        {
+          "width": "auto",
+          "maxWidth": "64px",
+          "text": "Attemps"
+        }
+      ],
+      "list": [
+        {
+          "ipAddress": "89.1.34.149",
+          "country": {
+            "flag": "/images/flags/TR.svg",
+            "name": "Turkey"
+          },
+          "hostName": ["185.119.721.40.","ip.godaddy.com"],
+          "date": "09 March 2023, 6:34:24 PM",
+          "event": [
+            {
+              "dot": true,
+              "text": "IP Blocked",
+              "color": "error"
+            },
+            {
+              "dot": false,
+              "text": "Attemp to access proh...",
+              "color": "gray"
+            }
+          ],
+          "attemps": "5"
+        },
+        {
+          "ipAddress": "72.146.130.60",
+          "country": {
+            "flag": "/images/flags/TO.svg",
+            "name": "Tonga"
+          },
+          "hostName": ["185.119.721.40.","ip.godaddy.com"],
+          "date": "07 March 2023,\n6:32:24 PM",
+          "event": [
+            {
+              "dot": true,
+              "text": "IP Blocked",
+              "color": "error"
+            },
+            {
+              "dot": false,
+              "text": "Attemp to access proh...",
+              "color": "gray"
+            }
+          ],
+          "attemps": "4"
+        },
+        {
+          "ipAddress": "219.187.172.157",
+          "country": {
+            "flag": "/images/flags/TR.svg",
+            "name": "Turkey"
+          },
+          "hostName": ["185.119.721.40.","ip.godaddy.com"],
+          "date": "07 March 2023, 5:32:15 PM",
+          "event": [
+            {
+              "dot": true,
+              "text": "Denied",
+              "color": "warning"
+            },
+            {
+              "dot": false,
+              "text": "Attemp to access proh...",
+              "color": "gray"
+            }
+          ],
+          "attemps": "3"
+        },
+        {
+          "ipAddress": "204.174.44.245",
+          "country": {
+            "flag": "/images/flags/QA.svg",
+            "name": "Qatar"
+          },
+          "hostName": ["185.119.721.40.","ip.godaddy.com"],
+          "date": "09 March 2023, 6:34:24 PM",
+          "event": [
+            {
+              "dot": true,
+              "text": "IP Blocked",
+              "color": "error"
+            },
+            {
+              "dot": false,
+              "text": "Attemp to access proh...",
+              "color": "gray"
+            }
+          ],
+          "attemps": "2"
+        },
+        {
+          "ipAddress": "245.252.75.94",
+          "country": {
+            "flag": "/images/flags/NP.svg",
+            "name": "Nepal"
+          },
+          "hostName": ["185.119.721.40.","ip.godaddy.com"],
+          "date": "09 March 2023, 6:34:24 PM",
+          "event": [
+            {
+              "dot": true,
+              "text": "IP Blocked",
+              "color": "error"
+            },
+            {
+              "dot": false,
+              "text": "Attemp to access proh...",
+              "color": "gray"
+            }
+          ],
+          "attemps": "6"
+        },
+        {
+          "ipAddress": "135.67.222.3",
+          "country": {
+            "flag": "/images/flags/GR.svg",
+            "name": "Greece"
+          },
+          "hostName": ["185.119.721.40.","ip.godaddy.com"],
+          "date": "09 March 2023, 6:34:24 PM",
+          "event": [
+            {
+              "dot": true,
+              "text": "IP Blocked",
+              "color": "error"
+            },
+            {
+              "dot": false,
+              "text": "Attemp to access proh...",
+              "color": "gray"
+            }
+          ],
+          "attemps": "24"
+        }
+      ]
+    }
+  },
+  "lockouts": {
+    "table": {
+      "head": [
+        {
+          "width": "152px",
+          "text": "IP Address"
+        },
+        {
+          "maxWidth": "118px",
+          "text": "Country"
+        },
+        {
+          "maxWidth": "150px",
+          "text": "Hostname"
+        },
+        {
+          "maxWidth": "145px",
+          "text": "Expires"
+        },
+        {
+          "width": "auto",
+          "text": "Reason"
+        }
+      ],
+      "list": [
+        {
+          "ipAddress": "89.1.34.149",
+          "country": {
+            "flag": "/images/flags/TR.svg",
+            "name": "Turkey"
+          },
+          "hostName": ["185.119.721.40.","ip.godaddy.com"],
+          "date": "09 March 2023, 6:34:24 PM",
+          "reason": {
+            "text": "Multiple failed login attempts",
+            "color": "error"
+          }
+        },
+        {
+          "ipAddress": "72.146.130.60",
+          "country": {
+            "flag": "/images/flags/TO.svg",
+            "name": "Tonga"
+          },
+          "hostName": ["185.119.721.40.","ip.godaddy.com"],
+          "date": "07 March 2023, 6:32:24 PM",
+          "reason": {
+            "text": "Unusual activity detected",
+            "color": "gray"
+          }
+        },
+        {
+          "ipAddress": "219.187.172.157",
+          "country": {
+            "flag": "/images/flags/TR.svg",
+            "name": "Turkey"
+          },
+          "hostName": ["185.119.721.40.","ip.godaddy.com"],
+          "date": "07 March 2023, 5:32:15 PM",
+          "reason": {
+            "text": "Malicious file upload detected",
+            "color": "gray"
+          }
+        },
+        {
+          "ipAddress": "204.174.44.245",
+          "country": {
+            "flag": "/images/flags/QA.svg",
+            "name": "Qatar"
+          },
+          "hostName": ["185.119.721.40.","ip.godaddy.com"],
+          "date": "09 March 2023, 6:34:24 PM",
+          "reason": {
+            "text": "Server resource limits exceeded",
+            "color": "gray"
+          }
+        },
+        {
+          "ipAddress": "245.252.75.94",
+          "country": {
+            "flag": "/images/flags/NP.svg",
+            "name": "Nepal"
+          },
+          "hostName": ["185.119.721.40.","ip.godaddy.com"],
+          "date": "09 March 2023, 6:34:24 PM",
+          "reason": {
+            "text": "Unusual activity detected",
+            "color": "gray"
+          }
+        },
+        {
+          "ipAddress": "135.67.222.3",
+          "country": {
+            "flag": "/images/flags/GR.svg",
+            "name": "Greece"
+          },
+          "hostName": ["185.119.721.40.","ip.godaddy.com"],
+          "date": "09 March 2023, 6:34:24 PM",
+          "reason": {
+            "text": "Unusual activity detected",
+            "color": "gray"
+          }
+        }
+      ]
+    }
+  },
+  "logs": {
+    "table": {
+      "head": [
+        {
+          "width": "112px",
+          "text": "User"
+        },
+        {
+          "minWidth": "175px",
+          "text": "Category"
+        },
+        {
+          "minWidth": "145px",
+          "text": "Date"
+        },
+        {
+          "width": "auto",
+          "text": "Activity"
+        }
+      ],
+      "list": [
+        {
+          "user": {
+            "icon": "admin-users",
+            "text": "Admin"
+          },
+          "category": {
+            "dot": true,
+            "text": "IP Blocked",
+            "color": "error"
+          },
+          "date": "09 March 2023, 6:34:24 PM",
+          "activity": "IP 185.119.721.40 has been added to the whitelist."
+        },
+        {
+          "user": {
+            "icon": "admin-users",
+            "text": "Admin"
+          },
+          "category": {
+            "dot": true,
+            "text": "IP Blocked",
+            "color": "error"
+          },
+          "date": "09 March 2023, 6:34:24 PM",
+          "activity": "IP 185.119.721.40 has been added to the whitelist."
+        },
+        {
+          "user": {
+            "icon": "admin-users",
+            "text": "Admin"
+          },
+          "category": {
+            "dot": true,
+            "text": "IP Blocked",
+            "color": "error"
+          },
+          "date": "09 March 2023, 6:34:24 PM",
+          "activity": "IP 185.119.721.40 has been added to the whitelist."
+        },
+        {
+          "user": {
+            "icon": "admin-users",
+            "text": "Admin"
+          },
+          "category": {
+            "dot": true,
+            "text": "IP Blocked",
+            "color": "error"
+          },
+          "date": "09 March 2023, 6:34:24 PM",
+          "activity": "IP 185.119.721.40 has been added to the whitelist."
+        },
+        {
+          "user": {
+            "icon": "admin-users",
+            "text": "Admin"
+          },
+          "category": {
+            "text": "Change Settings",
+            "color": "gray"
+          },
+          "date": "09 March 2023, 6:34:24 PM",
+          "activity": "IP 185.119.721.40 has been added to the whitelist."
+        },
+        {
+          "user": {
+            "icon": "admin-users",
+            "text": "Admin"
+          },
+          "category": {
+            "dot": true,
+            "text": "IP Blocked",
+            "color": "error"
+          },
+          "date": "09 March 2023, 6:34:24 PM",
+          "activity": "IP 185.119.721.40 has been added to the whitelist."
+        }
+      ]
+    }
+  },
+  "whitelist": {
+    "table": {
+      "head": [
+        {
+          "width": "152px",
+          "text": "IP Address"
+        },
+        {
+          "minWidth": "118px",
+          "text": "Country"
+        },
+        {
+          "minWidth": "256px",
+          "text": "Hostname"
+        },
+        {
+          "minWidth": "142px",
+          "text": "IP Version"
+        },
+        {
+          "width": "142px",
+          "text": "Protocol"
+        },
+        {
+          "minWidth": "176px",
+          "width": "auto",
+          "text": "Date Added"
+        }
+      ],
+      "list": [
+        {
+          "ipAddress": "89.1.34.149",
+          "country": {
+            "flag": "/images/flags/TR.svg",
+            "name": "Turkey"
+          },
+          "hostName": ["185.119.721.40.", "ip.godaddy.com"],
+          "ipVersion": "IPv4",
+          "protocol": "TCP",
+          "date": "09 March 2023, 6:34:24 PM"
+        },
+        {
+          "ipAddress": "89.1.34.149",
+          "country": {
+            "flag": "/images/flags/TO.svg",
+            "name": "Tonga"
+          },
+          "hostName": ["185.119.721.40.", "ip.godaddy.com"],
+          "ipVersion": "IPv4",
+          "protocol": "TCP",
+          "date": "09 March 2023, 6:34:24 PM"
+        },
+        {
+          "ipAddress": "89.1.34.149",
+          "country": {
+            "flag": "/images/flags/TR.svg",
+            "name": "Turkey"
+          },
+          "hostName": ["185.119.721.40.", "ip.godaddy.com"],
+          "ipVersion": "IPv4",
+          "protocol": "UDP",
+          "date": "09 March 2023, 6:34:24 PM"
+        },
+        {
+          "ipAddress": "89.1.34.149",
+          "country": {
+            "flag": "/images/flags/QA.svg",
+            "name": "Qatar"
+          },
+          "hostName": ["185.119.721.40.", "ip.godaddy.com"],
+          "ipVersion": "IPv4",
+          "protocol": "UDP",
+          "date": "09 March 2023, 6:34:24 PM"
+        },
+        {
+          "ipAddress": "89.1.34.149",
+          "country": {
+            "flag": "/images/flags/NP.svg",
+            "name": "Nepal"
+          },
+          "hostName": ["185.119.721.40.", "ip.godaddy.com"],
+          "ipVersion": "IPv4",
+          "protocol": "UDP",
+          "date": "09 March 2023, 6:34:24 PM"
+        },
+        {
+          "ipAddress": "89.1.34.149",
+          "country": {
+            "flag": "/images/flags/GR.svg",
+            "name": "Greece"
+          },
+          "hostName": ["185.119.721.40.", "ip.godaddy.com"],
+          "ipVersion": "IPv4",
+          "protocol": "UDP",
+          "date": "09 March 2023, 6:34:24 PM"
+        }
+      ]
+    }
+  },
+  "paywall": {
+    "title": "Upgrade to Safe Zone Pro",
+    "description": "Enjoy advanced protection and peace of mind with WP Safe Zone PRO. Keep your website safe from all threats effortlessly.",
+    "detail": {
+      "top": "You are buying",
+      "title": "Safe Zone Pro",
+      "list": [
+        {
+          "title": "Live Firewall",
+          "text": "Fortify your defenses with our Live Firewall, actively safeguarding your website from evolving threats."
+        },
+        {
+          "title": "Malware Scanner",
+          "text": "Detect and eliminate threats with our state-of-the-art Malware Scanner, keeping your WordPress site secure."
+        },
+        {
+          "title": "Anti-Spam Engine",
+          "text": "Keep your online space clutter-free with our Anti-Spam Engine, guarding against unwanted intrusions."
+        }
+      ],
+      "payment": {
+        "text": "Total due",
+        "time": "year",
+        "price": "$59.99"
+      }
+    },
+    "forms": {
+      "paymentMethodRatio": {
+        "name": "paymentMethod",
+        "list": [
+          {
+            "checked": true,
+            "title": "Monthly ($8.99/month)",
+            "text": "Pay $130 per year"
+          },
+          {
+            "checked": false,
+            "title": "Yearly ($4.99/month)",
+            "text": "Pay $130 per year"
+          }
+        ]
+      }
+    }
+  }
+}

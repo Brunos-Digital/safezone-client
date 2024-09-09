@@ -1,0 +1,53 @@
+{% extends "layouts/default.njk" %}
+{% from "components/tab-menu.njk" import tabMenu %}
+{% from "components/sidebar.njk" import sidebar %}
+{% from "components/cards/info.njk" import infoCard %}
+{% from "components/cards/order.njk" import orderCard %}
+
+{% set headingProtection = {text:"Providing full protection", color:"success"} %}
+{% set most = {
+  title: "Most recently added IPs",
+  text: "Based on the entire year",
+  list: [
+    {
+      link: "/",
+      value: "245.252.75.94",
+      text: "<span class='text-gray-40'>09/03/2023</span>"
+    },
+    {
+      link: "/",
+      value: "245.252.75.94",
+      text: "<span class='text-gray-40'>09/03/2023</span>"
+    },
+    {
+      link: "/",
+      value: "245.252.75.94",
+      text: "<span class='text-gray-40'>09/03/2023</span>"
+    },
+    {
+      link: "/",
+      value: "245.252.75.94",
+      text: "<span class='text-gray-40'>09/03/2023</span>"
+    },
+    {
+      link: "/",
+      value: "245.252.75.94",
+      text: "<span class='text-gray-40'>09/03/2023</span>"
+    }
+  ]
+} %}
+
+{% block main %}
+  <div class="whitelist">
+    {% call tabMenu(home.tabMenu, rounded=true, selected="whitelist") %}{% endcall %}
+    {% include "components/whitelist/panel.njk" %}
+    {% include "components/whitelist/datatable.njk" %}
+  </div>
+{% endblock %}
+
+{% block sidebar %}
+  {% call sidebar() %}
+    {{ orderCard(title=most.title, text=most.text, list=most.list) }}
+    {{ infoCard(value="246", avatar="admin-network", title="Allowed IPs", text="Last update: 23:45", select=["Today", "Today"]) }}
+  {% endcall %}
+{% endblock %}

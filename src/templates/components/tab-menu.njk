@@ -1,0 +1,19 @@
+{% macro tabMenu(list, rounded, bottom, selected) %}
+  <div class="tab-menu{% if rounded %} tab-menu--rounded{% endif %}{% if bottom %} tab-menu--shadow{% endif %}">
+    <div class="tab-menu__main">
+      <div class="tab-menu__list">
+        {% for item in list %}
+          <a href="{{ item.link }}" class="tab-menu__item{% if item.slug === selected %} active{% endif %}">{{ item.text }}</a>
+        {% endfor %}
+      </div>
+      <a href="/" class="tab-menu__logo" aria-label="route home">
+        <img draggable="false" src="/images/logo.webp" alt="logo">
+      </a>
+    </div>
+    {% if bottom %}
+      <div class="tab-menu__bottom">
+        {{ caller() }}
+      </div>
+    {% endif %}
+  </div>
+{% endmacro %}

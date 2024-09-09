@@ -1,0 +1,28 @@
+{% from "components/table/container.njk" import container %}
+{% from "components/icon.njk" import icon %}
+
+{% macro table() %}
+  <div class="table">
+    <div class="table-actions">
+      <div class="table-actions__container">
+        <button class="btn btn-white btn-icon me-auto">
+          {{ icon("lock") }}
+          Manage Permissions
+        </button>
+        <button class="btn btn-blue-5 btn-icon">
+          {{ icon("download") }}
+          Export Selected
+        </button>
+        <button class="btn btn-error-500">
+          Delete All
+        </button>
+      </div>
+    </div>
+    <div class="table-container">
+      {% call container() %}
+        {{ caller() }}
+      {% endcall %}
+    </div>
+    {% include "components/table/pagination.njk" %}
+  </div>
+{% endmacro %}

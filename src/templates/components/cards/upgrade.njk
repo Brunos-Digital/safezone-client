@@ -1,0 +1,37 @@
+{% from "components/icon.njk" import icon %}
+
+{% set list = [
+  "DDoS Protection",
+  "Enhanced Monitoring",
+  "Advanced Firewall"
+] %}
+
+<div class="sz-card">
+  <div class="sz-card-upgrade">
+    <div class="sz-card-upgrade__heading">
+      <div class="sz-card-upgrade__title">
+        Secure Swiftly, Go <span>Safe Zone Pro</span>
+      </div>
+      <div class="sz-card-upgrade__icon">
+        <img draggable="false" src="/images/shield-plus.svg" alt="shield plus">
+      </div>
+    </div>
+    <div class="sz-card-upgrade__list">
+      {% for item in list %}
+        <div class="sz-card-upgrade__feature">
+          <span class="sz-card-upgrade__feature-icon">
+            {{ icon("saved") }}
+          </span>
+          <span class="sz-card-upgrade__feature-text">
+            {{ item }}
+          </span>
+        </div>
+      {% endfor %}
+    </div>
+    <button class="btn btn-blue-40" data-bs-toggle="modal" data-bs-target="#paywallModal">Get Pro for $4.99</button>
+  </div>
+</div>
+
+{% include "components/paywall.njk" %}
+
+

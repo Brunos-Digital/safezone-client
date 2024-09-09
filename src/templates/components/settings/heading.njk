@@ -1,0 +1,13 @@
+{% from "components/icon.njk" import icon %}
+
+{% macro settingsHeading(title, text, avatar) %}
+  <div class="settings-heading">
+    <div class="settings-heading__icon">
+      {{ icon(avatar) }}
+    </div>
+    <div class="settings-heading__content">
+      <div class="settings-heading__title">{{ title }}</div>
+      <div class="settings-heading__text">{{ text }}</div>
+    </div>
+  </div>
+{% endmacro %}

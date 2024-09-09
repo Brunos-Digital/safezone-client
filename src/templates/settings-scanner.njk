@@ -1,0 +1,28 @@
+{% extends "layouts/default.njk" %}
+{% from "components/tab-menu.njk" import tabMenu %}
+{% from "components/badge.njk" import badge %}
+{% from "components/icon.njk" import icon %}
+{% from "components/sidebar.njk" import sidebar %}
+{% from "components/settings/main.njk" import main %}
+{% from "components/settings/heading.njk" import settingsHeading %}
+{% from "components/settings/form.njk" import settingsForm %}
+
+{% set headingProtection = {text:"Providing full protection", color:"success"} %}
+
+{% block main %}
+  <div class="settings">
+    {% call tabMenu(settings.tabMenu, selected="scanner") %}{% endcall %}
+    {% call main() %}
+      {{ settingsHeading(title=settings.malwareScanner.heading.title, text=settings.malwareScanner.heading.text, avatar=settings.malwareScanner.heading.avatar) }}
+      {{ settingsForm(settings.malwareScanner.form, "/foundation-scanner.html") }}
+    {% endcall %}
+  </div>
+{% endblock %}
+
+{% block sidebar %}
+  {% call sidebar() %}
+    {% include "components/cards/upgrade.njk" %}
+    {% include "components/cards/documentations.njk" %}
+    {% include "components/cards/guidance.njk" %}
+  {% endcall %}
+{% endblock %}

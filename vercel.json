@@ -1,0 +1,8 @@
+{
+	"buildCommand": "yarn build",
+	"outputDirectory": "dist",
+	"installCommand": "yarn install",
+	"routes": [
+		{ "src": "/(.*)", "dest": "/$1.html" }
+	]
+}

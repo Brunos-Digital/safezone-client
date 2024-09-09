@@ -1,0 +1,117 @@
+{% extends "layouts/default.njk" %}
+{% from "components/dialog.njk" import dialog %}
+{% from "components/modal.njk" import modal %}
+{% from "components/modal/actions.njk" import modalActions %}
+{% from "components/icon.njk" import icon %}
+
+{% set headingProtection = {text:"Providing full protection", color:"success"} %}
+
+{% block main %}
+  <div class="flex align-items-center gap-3 mb-6">
+    <button class="btn btn-error-500" data-bs-toggle="modal" data-bs-target="#licenseCancellation">
+      License Cancellation
+    </button>
+    <button class="btn btn-error-500" data-bs-toggle="modal" data-bs-target="#deleteEvents">
+      Delete 236 Events
+    </button>
+    <button class="btn btn-blue-50" data-bs-toggle="modal" data-bs-target="#paywallModal">
+      Paywall Modal
+    </button>
+    <button class="btn btn-blue-50" data-bs-toggle="modal" data-bs-target="#yourPaymentIsSuccessful">
+      Your payment is successful
+    </button>
+    <button class="btn btn-error-500" data-bs-toggle="modal" data-bs-target="#failedToReceivePayment">
+      Failed to receive payment
+    </button>
+
+    {% include "components/paywall.njk" %}
+    {% call dialog(id="licenseCancellation", iconName="remove", title="License Cancellation", description="Are you sure you want to cancel your WP Safe Zone license? <strong>This action can’t be undone.</strong>", color="red", closeButton="true", actionDirection="column") %}
+      <a href="/" class="btn btn-lg btn-error-500">Cancel My License</a>
+      <button class="btn btn-cancel btn-lg" data-bs-dismiss="modal">Close</button>
+    {% endcall %}
+    {% call dialog(id="deleteEvents", iconName="trash", title="Delete 236 Events", description="Are you sure you want to delete these events?", color="red", closeButton="true", actionDirection="column") %}
+      <a href="/" class="btn btn-lg btn-error-500">Delete All</a>
+      <button class="btn btn-cancel btn-lg" data-bs-dismiss="modal">Cancel</button>
+    {% endcall %}
+    {% call dialog(id="yourPaymentIsSuccessful", iconName="yes-alt", title="Your payment is successful", description="Your purchase of <strong>WP Safe Zone PRO Monthly</strong> has been successfully completed.", color="blue", closeButton="true", actionDirection="column") %}
+      <button class="btn btn-blue-50 btn-lg" data-bs-dismiss="modal">Close</button>
+    {% endcall %}
+    {% call dialog(id="failedToReceivePayment", iconName="warning", title="Failed to receive payment", description="There was an error with your card when purchasing, you can try again.", color="red", closeButton="true", actionDirection="column") %}
+      <a href="/" class="btn btn-lg btn-error-500">Retry</a>
+      <button class="btn btn-cancel btn-lg" data-bs-dismiss="modal">Cancel</button>
+    {% endcall %}
+  </div>
+  <div class="flex align-items-center gap-3 mb-6">
+    <button class="btn btn-error-500" data-bs-toggle="modal" data-bs-target="#thisIsAnErrorDialogBig">
+      This is an error dialog (Big)
+    </button>
+    <button class="btn btn-error-500" data-bs-toggle="modal" data-bs-target="#thisIsAnErrorDialogMid">
+      This is an error dialog (Mid)
+    </button>
+    <button class="btn btn-error-500" data-bs-toggle="modal" data-bs-target="#thisIsAnErrorDialogSm">
+      This is an error dialog (Sm)
+    </button>
+
+    {% call dialog(id="thisIsAnErrorDialogBig", iconName="trash", title="This is an error dialog", description="Detailed description of the error message", color="red", closeButton=true, actionDirection="column") %}
+      <a href="/" class="btn btn-lg btn-error-500">Placeholder</a>
+      <button class="btn btn-cancel btn-lg" data-bs-dismiss="modal">Cancel</button>
+    {% endcall %}
+    {% call dialog(id="thisIsAnErrorDialogMid", iconName="trash", title="This is an error dialog", description="Detailed description of the error message", color="red", closeButton=true, actionDirection="row") %}
+      <button class="btn btn-cancel btn-lg" data-bs-dismiss="modal">Cancel</button>
+      <a href="/" class="btn btn-lg btn-error-500">Placeholder</a>
+    {% endcall %}
+    {% call dialog(id="thisIsAnErrorDialogSm", title="This is an error dialog", description="Detailed description of the error message", color="red", closeButton=true, actionDirection="row") %}
+      <button class="btn btn-cancel btn-lg" data-bs-dismiss="modal">Cancel</button>
+      <a href="/" class="btn btn-lg btn-error-500">Placeholder</a>
+    {% endcall %}
+  </div>
+  <div class="flex align-items-center gap-3 mb-6">
+    <button class="btn btn-blue-50" data-bs-toggle="modal" data-bs-target="#thisIsAnInformativeDialogBig">
+      This is an informative dialog (Big)
+    </button>
+    <button class="btn btn-blue-50" data-bs-toggle="modal" data-bs-target="#thisIsAnInformativeDialogMid">
+      This is an informative dialog (Mid)
+    </button>
+    <button class="btn btn-blue-50" data-bs-toggle="modal" data-bs-target="#thisIsAnInformativeDialogSm">
+      This is an informative dialog (Sm)
+    </button>
+
+    {% call dialog(id="thisIsAnInformativeDialogBig", iconName="info", title="This is an informative dialog", description="Detailed description of the information message", color="blue", closeButton=true, actionDirection="column") %}
+      <a href="/" class="btn btn-lg btn-blue-50">Placeholder</a>
+      <button class="btn btn-cancel btn-lg" data-bs-dismiss="modal">Cancel</button>
+    {% endcall %}
+    {% call dialog(id="thisIsAnInformativeDialogMid", iconName="info", title="This is an informative dialog", description="Detailed description of the information message", color="blue", closeButton=true, actionDirection="row") %}
+      <button class="btn btn-cancel btn-lg" data-bs-dismiss="modal">Cancel</button>
+      <a href="/" class="btn btn-lg btn-blue-50">Placeholder</a>
+    {% endcall %}
+    {% call dialog(id="thisIsAnInformativeDialogSm", title="This is an informative dialog", description="Detailed description of the information message", color="blue", closeButton=true, actionDirection="row") %}
+      <button class="btn btn-cancel btn-lg" data-bs-dismiss="modal">Cancel</button>
+      <a href="/" class="btn btn-lg btn-blue-50">Placeholder</a>
+    {% endcall %}
+  </div>
+  <div class="mb-6">
+    <button class="btn btn-blue-50 btn-loading">
+      Example Popup
+    </button>
+    <button disabled class="btn btn-blue-50 btn-loading btn-icon">
+      Example Popup
+      {{ icon("arrow-right-alt2") }}
+    </button>
+  </div>
+  <div class="">
+    <button class="btn btn-blue-50" data-bs-toggle="modal" data-bs-target="#codeExample">
+      Code Example
+    </button>
+    {% call modal(id="codeExample", iconName="info", title="This is an informative dialog", description="Detailed description of the information message", color="blue", closeButton=true, actionDirection="row") %}
+      {% include "components/code-block.njk" %}
+      {% call modalActions(actionsPosition="right") %}
+        <button class="btn btn-cancel" data-bs-dismiss="modal" aria-label="modal close">
+          Discard
+        </button>
+        <button class="btn btn-blue-50" data-bs-toggle="modal" data-bs-target="#codeExample">
+          Apply
+        </button>
+      {% endcall %}
+    {% endcall %}
+  </div>
+{% endblock %}

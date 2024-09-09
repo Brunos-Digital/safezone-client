@@ -1,0 +1,22 @@
+{% from "components/icon.njk" import icon %}
+
+<div class="actions">
+  <label class="input-group">
+    <span class="input-group-icon">
+      {{ icon("search") }}
+    </span>
+    <input type="text" class="form-control" placeholder="Search for IP or hostname" aria-label="search">
+  </label>
+  <select class="actions-select" aria-label="actives">
+    <option value="1" selected>All activites</option>
+    <option value="2">All activites</option>
+  </select>
+  <button class="btn btn-icon btn-blue-40">
+    {{ icon("filter") }}
+    Filters
+  </button>
+  <button class="btn btn-icon btn-blue-5 ms-sm-auto">
+    {{ icon("download") }}
+    Export
+  </button>
+</div>

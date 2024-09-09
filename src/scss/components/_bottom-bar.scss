@@ -1,0 +1,132 @@
+.bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 13px 16px;
+  gap: 24px;
+  border-radius: 10px;
+  border: 1px solid $color-gray-2;
+  background: #FFF;
+  box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    &-content {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    &-text {
+      color: $color-gray-30;
+      font-size: 14px;
+      font-weight: 440;
+      line-height: 20px;
+      letter-spacing: -0.32px;
+    }
+    &-badge {
+      color: $color-blue-50 !important;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 18px;
+      display: flex;
+      padding: 0 4px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px !important;
+      background: #E5EEF7 !important;
+      outline: none !important;
+      box-shadow: none !important;
+      border: none !important;
+      text-transform: uppercase;
+    }
+
+    &:has(.form-check-input:not(:checked)) & {
+      &-text {
+        color: $color-error-200;
+      }
+    }
+
+    .form-check-input:disabled {
+      opacity: 1;
+    }
+    .form-check.form-switch {
+      cursor: pointer;
+    }
+    .form-check.form-switch .form-check-label {
+      color: $color-error-500;
+    }
+
+    &:not(:last-child) {
+      &::after {
+        content: "";
+        height: 24px;
+        width: 1px;
+        background: $color-gray-2;
+        display: flex;
+      }
+    }
+  }
+  &__version {
+    color: $color-gray-20 !important;
+    font-size: 14px;
+    font-weight: 480;
+    line-height: 20px;
+    letter-spacing: -0.32px;
+    text-decoration-line: underline;
+    transition: all 300ms;
+    box-shadow: none !important;
+
+    &:hover {
+      color: $color-gray-60 !important;
+    }
+  }
+
+  @include media-breakpoint-down(xxl) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    &__list {
+      gap: 10px;
+    }
+    &__item {
+      gap: 10px;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    &__list {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__item {
+      flex: 1;
+      width: 100%;
+
+      &-content {
+        width: 100%;
+
+        .form-check.form-switch.form-check-reverse {
+          justify-content: space-between;
+          width: 100%;
+          flex: 1;
+        }
+      }
+
+      &:not(:last-child) {
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{% extends "layouts/default.njk" %}
+{% from "components/tab-menu.njk" import tabMenu %}
+
+{% set headingProtection = {text:"Providing full protection", color:"success"} %}
+
+{% block fluid %}
+  <div class="page">
+    {% call tabMenu(changelog.tabMenu, selected="changelog") %}{% endcall %}
+    {% include "components/changelog/banner.njk" %}
+    {% include "components/changelog/versions.njk" %}
+  </div>
+{% endblock %}

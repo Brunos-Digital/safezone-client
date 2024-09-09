@@ -1,0 +1,52 @@
+{% extends "layouts/default.njk" %}
+{% from "components/badge.njk" import badge %}
+{% from "components/icon.njk" import icon %}
+{% from "components/sidebar.njk" import sidebar %}
+{% from "components/foundation/panel.njk" import foundationPanel %}
+{% from "components/cards/info.njk" import infoCard %}
+{% from "components/cards/order.njk" import orderCard %}
+
+{% set headingProtection = {text:"Providing full protection", color:"success"} %}
+{% set activity = {
+  title: "IPs with the most activity",
+  text: "Based on last 24 hours",
+  reverse: true,
+  list: [
+    {
+      value: "245.252.75.94",
+      text: "<b class='text-gray-30'>1.</b>"
+    },
+    {
+      value: "245.252.75.94",
+      text: "<b class='text-gray-30'>2.</b>"
+    },
+    {
+      value: "245.252.75.94",
+      text: "<b class='text-gray-30'>3.</b>"
+    },
+    {
+      value: "245.252.75.94",
+      text: "<b class='text-gray-30'>4.</b>"
+    },
+    {
+      value: "245.252.75.94",
+      text: "<b class='text-gray-30'>5.</b>"
+    }
+  ]
+} %}
+
+{% block main %}
+  <div class="foundation">
+    {% call foundationPanel(title="Firewall",avatar="shield", free="true") %}{% endcall %}
+    {% include "components/get-pro-banner.njk" %}
+  </div>
+{% endblock %}
+
+{% block sidebar %}
+  {% call sidebar() %}
+    {% include "components/cards/upgrade.njk" %}
+    {% include "components/cards/documentations.njk" %}
+    {% include "components/cards/guidance.njk" %}
+    {{ orderCard(title=activity.title, text=activity.text, list=activity.list, reverse=activity.reverse) }}
+  {% endcall %}
+{% endblock %}

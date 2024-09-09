@@ -1,0 +1,8 @@
+{% macro badge(dot, text, color) %}
+  <span class="badge badge--{{ color }}" title="{{ text }}">
+    {% if dot %}
+      <span class="badge__dot"></span>
+    {% endif %}
+    <span class="badge__text">{{ text }}</span>
+  </span>
+{% endmacro %}

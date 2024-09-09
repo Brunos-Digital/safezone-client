@@ -1,0 +1,64 @@
+{% from "components/table.njk" import table %}
+{% from "components/table/head.njk" import tableHead %}
+{% from "components/table/body.njk" import tableBody %}
+{% from "components/table/header.njk" import tableHeader %}
+{% from "components/table/row.njk" import tableRow %}
+{% from "components/table/cell.njk" import tableCell %}
+{% from "components/badge.njk" import badge %}
+{% from "components/icon.njk" import icon %}
+
+{% call table() %}
+  {% call tableHead() %}
+    {% call tableRow() %}
+      {% call tableHeader(width="64px") %}
+        <input type="checkbox" class="form-check-input " aria-label="select all" data-table-checkbox>
+      {% endcall %}
+      {% for item in logs.table.head %}
+        {% call tableHeader(width=item.width, maxWidth=item.maxWidth, minWidth=item.minWidth) %}
+          <span>{{ item.text | safe }}</span>
+        {% endcall %}
+      {% endfor %}
+      {% call tableHeader(width="64px") %}{% endcall %}
+    {% endcall %}
+  {% endcall %}
+  {% call tableBody() %}
+    {% for item in logs.table.list %}
+      {% call tableRow() %}
+        {% call tableCell() %}
+          <input type="checkbox" class="form-check-input " aria-label="select item" data-table-checkbox>
+        {% endcall %}
+        {% call tableCell() %}
+          <span class="table-main__type table-main__type--black">
+            <span class="table-main__type-icon">
+              {{ icon(item.user.icon) }}
+            </span>
+            <span class="table-main__type-text">
+              {{ item.user.text }}
+            </span>
+          </span>
+        {% endcall %}
+        {% call tableCell() %}
+          {{ badge(dot=item.category.dot, text=item.category.text, color=item.category.color) }}
+        {% endcall %}
+        {% call tableCell() %}
+          <span class="text-gray-100">{{ item.date }}</span>
+        {% endcall %}
+        {% call tableCell() %}
+          <span class="text-gray-40">{{ item.activity }}</span>
+        {% endcall %}
+        {% call tableCell() %}
+          <div class="table-dropdown dropdown">
+            <button class="table-dropdown__toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="6,14" aria-label="open table menu">
+              {{ icon("kebab-menu") }}
+            </button>
+            <ul class="dropdown-menu">
+              <li><button class="dropdown-item" type="button">Action</button></li>
+              <li><button class="dropdown-item" type="button">Another action</button></li>
+              <li><button class="dropdown-item" type="button">Something</button></li>
+            </ul>
+          </div>
+        {% endcall %}
+      {% endcall %}
+    {% endfor %}
+  {% endcall %}
+{% endcall %}

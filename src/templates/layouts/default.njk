@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WP Safe Zone</title>
+
+    <meta name="description" content="Site Description">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css"/>
+
+    <!-- build:css styles/main.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <link rel="stylesheet" href="/styles/bootstrap.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <!-- endbuild -->
+  </head>
+  <body>
+    <img width="99999" height="99999" aria-label="Splash" style="user-select:none;pointer-events:none;position:absolute;top:0;left:0;width:100%;height:var(--app-height, 100vh);max-width:100%;max-height:var(--app-height, 100vh);" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI5OTk5OXB4IiBoZWlnaHQ9Ijk5OTk5cHgiIHZpZXdCb3g9IjAgMCA5OTk5OSA5OTk5OSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48ZyBzdHJva2U9Im5vbmUiIGZpbGw9Im5vbmUiIGZpbGwtb3BhY2l0eT0iMCI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9Ijk5OTk5IiBoZWlnaHQ9Ijk5OTk5Ij48L3JlY3Q+IDwvZz4gPC9zdmc+">
+
+    {% from "components/heading.njk" import heading %}
+    {% block body %}
+      <div class="app">
+        {% block app %}
+          {{ heading(headingProtection) }}
+          <div class="app__body">
+            {% block fluid %}
+              <div class="app__body-main">
+                {% block main %}{% endblock %}
+              </div>
+              <div class="app__body-sidebar">
+                {% block sidebar %}{% endblock %}
+              </div>
+            {% endblock %}
+          </div>
+        {% endblock %}
+        {% include "components/splash-screen.njk" %}
+      </div>
+    {% endblock %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/javascript/javascript.min.js"></script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/static/jquery/dist/jquery.js"></script>
+    <script src="/static/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/echarts/js/echarts.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/home.js"></script>
+    <script src="/scripts/code-block.js"></script>
+    <script src="/scripts/foundation-status.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

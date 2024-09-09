@@ -1,0 +1,31 @@
+{% from "components/icon.njk" import icon %}
+
+{% macro foundationCard(badge, color, link, title, switches) %}
+  <div class="foundation-card{% if color %} foundation-card--{{ color }}{% endif %}">
+    <div class="foundation-card__main">
+      {% if badge %}
+        <span class="foundation-card__badge{% if badge.color or color %} foundation-card__badge--{{ badge.color or color }}{% endif %}">
+          {{ icon(badge.icon) }}
+          {{ badge.text }}
+        </span>
+      {% endif %}
+      <div class="foundation-card__content">
+        <div class="foundation-card__content-title">{{ title }}</div>
+        <a href="{{ link }}" class="foundation-card__content-link shadow-none">
+          View All
+          {{ icon("arrow-right-alt2") }}
+        </a>
+      </div>
+    </div>
+    <div class="foundation-card__list">
+      {% for item in switches %}
+        <div class="foundation-card__switch">
+          <label class="form-check form-switch form-check-reverse">
+            <span class="form-check-label">{{ item.label }}</span>
+            <input class="form-check-input" type="checkbox" role="switch"{% if item.checked %} checked{% endif %}>
+          </label>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endmacro %}

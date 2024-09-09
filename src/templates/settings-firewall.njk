@@ -1,0 +1,28 @@
+{% extends "layouts/default.njk" %}
+{% from "components/tab-menu.njk" import tabMenu %}
+{% from "components/badge.njk" import badge %}
+{% from "components/icon.njk" import icon %}
+{% from "components/sidebar.njk" import sidebar %}
+{% from "components/settings/main.njk" import main %}
+{% from "components/settings/heading.njk" import settingsHeading %}
+{% from "components/settings/form.njk" import settingsForm %}
+
+{% set headingProtection = {text:"Providing full protection", color:"success"} %}
+
+{% block main %}
+  <div class="settings">
+    {% call tabMenu(settings.tabMenu, selected="firewall") %}{% endcall %}
+    {% call main() %}
+      {{ settingsHeading(title=settings.firewall.heading.title, text=settings.firewall.heading.text, avatar=settings.firewall.heading.avatar) }}
+      {{ settingsForm(settings.firewall.form, "/foundation-firewall.html") }}
+    {% endcall %}
+  </div>
+{% endblock %}
+
+{% block sidebar %}
+  {% call sidebar() %}
+    {% include "components/cards/upgrade.njk" %}
+    {% include "components/cards/documentations.njk" %}
+    {% include "components/cards/guidance.njk" %}
+  {% endcall %}
+{% endblock %}

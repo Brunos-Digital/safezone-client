@@ -1,0 +1,25 @@
+{% from "components/icon.njk" import icon %}
+
+{% macro foundationPanel(title,text,avatar,free) %}
+  <div class="foundation-panel{% if free %} free{% endif %}">
+    <div class="foundation-panel__heading">
+      <div class="foundation-panel__avatar">
+        {{ icon(avatar) }}
+      </div>
+      <div class="foundation-panel__content">
+        <div class="foundation-panel__content-title">
+          {{ title }}
+          {% if free %}
+            <a href="#" class="foundation-panel__content-badge">PRO</a>
+          {% endif %}
+        </div>
+        <div class="foundation-panel__content-text">{% if not free %}{{ text }}{% else %}Upgrade to <b>Pro</b> to activate this feature{% endif %}</div>
+      </div>
+    </div>
+    {% if not free %}
+      <div class="foundation-panel__actions">
+        {{ caller() }}
+      </div>
+    {% endif %}
+  </div>
+{% endmacro %}

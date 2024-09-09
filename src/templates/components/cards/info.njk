@@ -1,0 +1,32 @@
+{% from "components/icon.njk" import icon %}
+{% from "components/badge.njk" import badge %}
+
+{% macro infoCard(value, avatar, title, text, select, link) %}
+  <div class="sz-card sz-card-info">
+    <div class="sz-card-info__main">
+      <div class="sz-card-info__value">
+        <span class="sz-card-info__value-text">{{ value | safe }}</span>
+        <span>{{ icon(avatar) }}</span>
+      </div>
+      <div class="sz-card-info__content">
+        <div class="sz-card-info__content-title">{{ title }}</div>
+        <div class="sz-card-info__content-text">{{ text }}</div>
+      </div>
+    </div>
+    {% if select or link %}
+      <div class="sz-card-info__actions">
+        {% if select %}
+          <select class="form-select form-select-sm" aria-label="info select">
+            {% for item in select %}
+              <option value="{{ loop.index }}"{% if loop.index === 1 %} selected{% endif %}>{{ item }}</option>
+            {% endfor %}
+          </select>
+        {% elseif link %}
+          <a href="{{ link.to }}">
+            {{ badge(link.dot, link.text, link.color) }}
+          </a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+{% endmacro %}

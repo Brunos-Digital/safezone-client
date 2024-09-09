@@ -1,0 +1,141 @@
+.whitelist {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+
+    &__heading {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      &-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 1em;
+        width: 1em;
+        font-size: 48px;
+        background: #E5EEF7;
+        border-radius: 50%;
+        flex: none;
+
+        .icon {
+          font-size: 24px;
+          color: $color-blue-60;
+        }
+      }
+      &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      &-title {
+        color: $color-gray-100;
+        font-size: 20px;
+        font-weight: 480;
+        line-height: 28px;
+        letter-spacing: -0.64px;
+      }
+      &-text {
+        color: $color-gray-30;
+        font-size: 14px;
+        font-weight: 440;
+        line-height: 20px;
+        letter-spacing: -0.32px;
+      }
+    }
+    &__form {
+      display: flex;
+      width: 100%;
+      gap: 24px;
+      padding-top: 30px;
+      padding-bottom: 8px;
+      border-top: 1px solid #E5EEF7;
+
+      &-title {
+        color: $color-gray-70;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 42px;
+        letter-spacing: -0.32px;
+        width: 100%;
+        max-width: 152px;
+      }
+      &-entry {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 16px;
+        width: 100%;
+      }
+      &-input {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+        max-width: 280px;
+      }
+      &-help {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: $color-gray-20;
+        font-size: 12px;
+        font-weight: 480;
+        line-height: 16px;
+        letter-spacing: -0.32px;
+
+        .icon {
+          font-size: 12px;
+          color: $color-gray-20;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    &-panel {
+      padding: 24px;
+
+      &__form {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &-panel {
+      padding: 16px;
+
+      &__heading {
+        gap: 12px;
+
+        &-icon {
+          font-size: 40px;
+
+          .icon {
+            font-size: 20px;
+          }
+        }
+        &-title {
+          font-size: 18px;
+          line-height: 24px;
+        }
+        &-text {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}

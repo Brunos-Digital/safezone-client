@@ -1,0 +1,40 @@
+{% extends "layouts/default.njk" %}
+{% from "components/badge.njk" import badge %}
+{% from "components/icon.njk" import icon %}
+{% from "components/sidebar.njk" import sidebar %}
+{% from "components/foundation/panel.njk" import foundationPanel %}
+{% from "components/bottom-bar.njk" import bottomBar %}
+
+{% set headingProtection = {text:"Providing full protection", color:"success"} %}
+
+{% block main %}
+  <div class="foundation">
+    {% call foundationPanel(title="Everything looks great!",text="Everything was perfect at your last scan.",avatar="shield-alt") %}
+      <div class="foundation-panel__actions-scanner">
+        <span>
+          <button class="btn btn-blue-40 btn-icon" type="button">
+            Scan Now
+            {{ icon("loading") }}
+          </button>
+          <span>Last scan: <b>08:52 AM</b></span>
+        </span>
+        <a href="/settings-scanner.html" class="btn btn-white btn-icon">
+          Settings
+          {{ icon("admin-tools") }}
+        </a>
+      </div>
+    {% endcall %}
+    {% include "components/foundation/status.njk" %}
+    {% include "components/foundation/scanner/datatable.njk" %}
+    {{ bottomBar(pro="true") }}
+  </div>
+{% endblock %}
+
+{% block sidebar %}
+  {% call sidebar() %}
+    {% include "components/cards/upgrade.njk" %}
+    {% include "components/cards/documentations.njk" %}
+    {% include "components/cards/guidance.njk" %}
+    {% include "components/cards/scan-results.njk" %}
+  {% endcall %}
+{% endblock %}

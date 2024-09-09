@@ -1,0 +1,5 @@
+{% macro modalActions(actionDirection="row", actionsPosition="left") %}
+  <div class="modal-actions modal-actions--{{ actionDirection }} modal-actions--{{ actionsPosition }}">
+    {{ caller() }}
+  </div>
+{% endmacro %}

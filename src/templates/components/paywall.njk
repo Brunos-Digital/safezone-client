@@ -1,0 +1,84 @@
+{% from "components/icon.njk" import icon %}
+
+<div class="modal paywall fade" id="paywallModal" tabindex="-1" aria-labelledby="paywallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="paywall-container">
+      <div class="paywall-detail">
+        <div class="paywall-detail__container">
+          <div class="paywall-detail__heading">
+            <div class="paywall-detail__top">{{ paywall.detail.top }}</div>
+            <div class="paywall-detail__title">{{ paywall.detail.title }}</div>
+          </div>
+          <div class="paywall-detail__list">
+            {% for item in paywall.detail.list %}
+              <div class="paywall-detail__item">
+                <div class="paywall-detail__item-heading">
+                  <div class="paywall-detail__item-icon">
+                    {{ icon("yes-alt") }}
+                  </div>
+                  <div class="paywall-detail__item-title">{{ item.title }}</div>
+                </div>
+                <div class="paywall-detail__item-text">{{ item.text }}</div>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="paywall-detail__payment">
+            <div class="paywall-detail__payment-text">{{ paywall.detail.payment.text }}</div>
+            <div class="paywall-detail__payment-price">
+              <strong>{{ paywall.detail.payment.price }}</strong>{% if paywall.detail.payment.time %}/{{ paywall.detail.payment.time }}{% endif %}
+            </div>
+          </div>
+        </div>
+        <div class="paywall-detail__effect">
+          <img src="/images/paywall-effect.webp" alt="effect">
+        </div>
+      </div>
+      <div class="paywall-main">
+        <div class="paywall-heading">
+          <div class="paywall-heading__title">{{ paywall.title }}</div>
+          <div class="paywall-heading__description">{{ paywall.description }}</div>
+        </div>
+        <form class="paywall-form">
+          <div class="paywall-ratios">
+            {% for item in paywall.forms.paymentMethodRatio.list %}
+              <label class="paywall-ratios__item form-check">
+                <input {% if item.checked %}checked{% endif %} class="form-check-input" type="radio" name="ratio-{{ paywall.forms.paymentMethodRatio.name }}">
+                <span class="paywall-ratios__item-content">
+                  <span class="paywall-ratios__item-title">{{ item.title }}</span>
+                  <span class="paywall-ratios__item-text">{{ item.text }}</span>
+                </span>
+              </label>
+            {% endfor %}
+          </div>
+          <div class="paywall-inputs row">
+            <div class="col-lg-6">
+              <div class="d-flex flex-column">
+                <label for="paywall-name" class="form-label">Your name</label>
+                <input type="email" class="form-control form-control-lg" id="paywall-name" placeholder="Steve">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="d-flex flex-column">
+                <label for="paywall-surname" class="form-label">Your surname</label>
+                <input type="email" class="form-control form-control-lg" id="paywall-surname" placeholder="Jobs">
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="d-flex flex-column">
+                <label for="paywall-email" class="form-label">Email address</label>
+                <input type="email" class="form-control form-control-lg" id="paywall-email" placeholder="example@domain.com">
+              </div>
+            </div>
+          </div>
+          <div class="paywall-actions">
+            <button class="btn btn-lg btn-blue-50 w-100" type="submit">Proceed to Payment</button>
+            <button class="btn btn-cancel btn-lg w-100" type="button" data-bs-dismiss="modal">Close</button>
+          </div>
+        </form>
+        <button class="paywall-main__close" data-bs-dismiss="modal" aria-label="modal close">
+          {{ icon("no-alt") }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

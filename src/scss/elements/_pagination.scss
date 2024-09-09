@@ -1,0 +1,65 @@
+.pagination {
+  --statu-pagination-padding-x: 12px;
+  --statu-pagination-padding-y: 6px;
+  --statu-pagination-font-size: 14px;
+  --statu-pagination-color: #{$color-gray-30};
+  --statu-pagination-bg: transparent;
+  --statu-pagination-border-width: 0;
+  --statu-pagination-border-radius: 0;
+  --statu-pagination-hover-color: #{$color-gray-80};
+  --statu-pagination-hover-bg: #{$color-gray-0};
+  --statu-pagination-focus-color: #{$color-gray-80};
+  --statu-pagination-focus-bg: #{$color-gray-0};
+  --statu-pagination-focus-box-shadow: none;
+  --statu-pagination-active-color: #{$color-gray-80};
+  --statu-pagination-active-bg: #{$color-gray-0};
+  --statu-pagination-disabled-color: #{$color-gray-30};
+  --statu-pagination-disabled-bg: transparent;
+
+  gap: 6px;
+  margin: 0;
+
+  .page-link {
+    font-weight: 600;
+    border-radius: 8px !important;
+
+    .page-link.disabled {
+      opacity: 1;
+    }
+  }
+}
+.dt-paging {
+  display: flex;
+  width: 100%;
+  padding: 10px 16px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+  border-radius: 0 0 10px 10px;
+  background: #FFF;
+
+  &-button {
+    color: $color-gray-30 !important;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 300ms;
+    padding: 6px 12px !important;
+    background: transparent !important;
+
+    &.current {
+      background: $color-gray-0 !important;
+      color: $color-gray-80 !important;
+    }
+    &:hover {
+      background: $color-gray-0 !important;
+      color: $color-gray-80 !important;
+    }
+  }
+}
+

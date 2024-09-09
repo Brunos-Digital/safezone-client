@@ -1,0 +1,26 @@
+{% from "components/icon.njk" import icon %}
+
+{% macro modal(id="exampleModal", iconName, title="Title", description, color="blue", closeButton=true, modalSize) %}
+  <div class="modal fade" id="{{ id }}" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered{% if modalSize %} modal-{{ modalSize }}{% endif %}">
+      <div class="modal-container">
+        <div class="modal-heading">
+          <div class="modal-heading__title">{{ title }}</div>
+          {% if description %}
+            <div class="modal-heading__text">
+              {{ description | safe }}
+            </div>
+          {% endif %}
+        </div>
+        <div class="modal-inner">
+          {{ caller() }}
+        </div>
+        {% if closeButton %}
+          <button class="modal-close" data-bs-dismiss="modal" aria-label="modal close">
+            {{ icon("no-alt") }}
+          </button>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endmacro %}

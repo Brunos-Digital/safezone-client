@@ -1,0 +1,15 @@
+{% from "components/icon.njk" import icon %}
+
+{% macro heading(protection={text:"Providing full protection", color:"success"}) %}
+
+  <div class="heading">
+    <div class="heading__top">
+      <span class="heading__title">WP Safe Zone</span>
+      <span class="heading__version">(v.1.2.5)</span>
+    </div>
+    <div class="heading__protection heading__protection--{{ protection.color }}">
+      {{ icon("shield-alt") }}
+      <span>{{ protection.text }}</span>
+    </div>
+  </div>
+{% endmacro %}

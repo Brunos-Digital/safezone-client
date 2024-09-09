@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "name": "Project Name",
+    "lastOpened": 0,
+    "created": 1654764896934
+  },
+  "iconSets": [],
+  "uid": -1,
+  "preferences": {
+    "showGlyphs": true,
+    "showCodes": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "icon-",
+      "metadata": {
+        "fontFamily": "ProjectName",
+        "majorVersion": 1,
+        "minorVersion": 0,
+        "fontURL": "https://brunos.digital",
+        "copyright": "Brunos Digital",
+        "designer": "Brunos Digital",
+        "designerURL": "https://brunos.digital",
+        "license": "Brunos Digital",
+        "description": "",
+        "licenseURL": "https://brunos.digital"
+      },
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 6.25,
+        "whitespace": 50
+      },
+      "embed": false,
+      "noie8": true,
+      "ie7": false,
+      "includeMetadata": true,
+      "showMetadata": true,
+      "cssVars": true,
+      "cssVarsFormat": "scss",
+      "showSelector": true,
+      "selector": "class",
+      "classSelector": ".icon",
+      "showMetrics": false,
+      "showVersion": true,
+      "autoHost": true
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": true,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215,
+      "name": "icomoon",
+      "classSelector": ".icon"
+    },
+    "historySize": 50,
+    "quickUsageToken": {
+    }
+  },
+  "time": 1655875154080
+}

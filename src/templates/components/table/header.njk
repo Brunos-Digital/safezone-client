@@ -1,0 +1,13 @@
+{% from "components/icon.njk" import icon %}
+
+{% macro tableHeader(width, minWidth, maxWidth, order) %}
+  <th class="{% if order %}table-main__order{% endif %}" style="width: {{ width }}; min-width: {{ minWidth }}; max-width: {{ maxWidth }}">
+    {{ caller() }}
+
+    {% if order %}
+      <span class="table-main__order-icon">
+        {{ icon("arrow-up-alt") }}
+      </span>
+    {% endif %}
+  </th>
+{% endmacro %}

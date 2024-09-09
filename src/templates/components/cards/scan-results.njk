@@ -1,0 +1,61 @@
+{% from "components/icon.njk" import icon %}
+{% from "components/badge.njk" import badge %}
+
+{% set list = [
+  {
+    title: "<span>No malware was found.</span>",
+    state: "succsess"
+  },
+  {
+    title: "<b>‘phish-db.js’</b> named risky file blocked.",
+    state: "blocked"
+  },
+  {
+    title: "<b>‘mybb.php’</b> named duplicated file deleted.",
+    state: "blocked"
+  },
+  {
+    title: "Database status: <span>Up to date</span>",
+    state: "succsess"
+  },
+  {
+    title: "Next scheduled scan: <span>Today, 20:00</span>",
+    state: "next"
+  }
+] %}
+
+<div class="sz-card p-0">
+  <div class="sz-card-results">
+    <div class="sz-card-results__heading">
+      <div class="sz-card-results__content">
+        <div class="sz-card-results__value">
+          <span><b>4.5</b>/5</span>
+          {{ icon("yes-alt") }}
+        </div>
+        <div class="sz-card-results__report">
+          <div class="sz-card-results__report-title">Scan report</div>
+          <div class="sz-card-results__report-value">Last scan: 14:57</div>
+        </div>
+      </div>
+      <a href="#">{{ badge(text="See Results", color="blue") }}</a>
+    </div>
+    <div class="sz-card-results__list">
+      {% for item in list %}
+        <div class="sz-card-results__item sz-card-results__item--{{ item.state }}">
+          <div class="sz-card-results__item-text">{{ item.title | safe }}</div>
+          <div class="sz-card-results__item-icon">
+            {% if item.state === "succsess" %}
+              {{ icon("yes-alt") }}
+            {% endif %}
+            {% if item.state === "next" %}
+              {{ icon("loading") }}
+            {% endif %}
+            {% if item.state === "blocked" %}
+              {{ icon("remove") }}
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

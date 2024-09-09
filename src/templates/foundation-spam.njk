@@ -1,0 +1,41 @@
+{% extends "layouts/default.njk" %}
+{% from "components/badge.njk" import badge %}
+{% from "components/icon.njk" import icon %}
+{% from "components/sidebar.njk" import sidebar %}
+{% from "components/foundation/panel.njk" import foundationPanel %}
+{% from "components/cards/info.njk" import infoCard %}
+{% from "components/foundation/card.njk" import foundationCard %}
+
+{% set headingProtection = {text:"Providing full protection", color:"success"} %}
+
+{% block main %}
+  <div class="foundation">
+    {% call foundationPanel(title="Anti-Spam Engine",text="Your website is protected live",avatar="email-close") %}
+      <div class="foundation-panel__actions-switch">
+        <label class="form-check form-switch">
+          <input class="form-check-input " type="checkbox" role="switch" checked>
+          <span class="form-check-label">Anti-Spam Protection</span>
+        </label>
+        <a href="/settings-spam.html" class="btn btn-white btn-icon">
+          Settings
+          {{ icon("admin-tools") }}
+        </a>
+      </div>
+    {% endcall %}
+    <div class="foundation-cards">
+      {{ infoCard(value="12", avatar="welcome-comments", title="Blocked Spams", text="Last update: 23:45", select=["Today", "Today"]) }}
+      {{ infoCard(value="4", avatar="lock", title="Blocked IPs", text="Last update: 22:17", select=["Today", "Today"]) }}
+      {{ foundationCard(title="Specific Settings", link="/", badge={text:"Update required", icon:"info-outline", color:"warning"}, switches=[{label:"Comments"},{label:"Payments", checked:true},{label:"Contact Form", checked:true}]) }}
+    </div>
+    {% include "components/foundation/spam/datatable.njk" %}
+  </div>
+{% endblock %}
+
+{% block sidebar %}
+  {% call sidebar() %}
+    {% include "components/cards/upgrade.njk" %}
+    {% include "components/cards/documentations.njk" %}
+    {% include "components/cards/guidance.njk" %}
+    {% include "components/cards/scan.njk" %}
+  {% endcall %}
+{% endblock %}

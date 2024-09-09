@@ -1,0 +1,31 @@
+{% from "components/icon.njk" import icon %}
+
+<div class="whitelist-panel">
+  <div class="whitelist-panel__heading">
+    <div class="whitelist-panel__heading-icon">
+      {{ icon("admin-site") }}
+    </div>
+    <div class="whitelist-panel__heading-content">
+      <div class="whitelist-panel__heading-title">Allowed IP</div>
+      <div class="whitelist-panel__heading-text">Add the IP addresses you allow to pass through the firewall.</div>
+    </div>
+  </div>
+  <div class="whitelist-panel__form">
+    <div class="whitelist-panel__form-title">IP Address</div>
+    <form action="#" class="whitelist-panel__form-entry">
+      <div class="whitelist-panel__form-input">
+        <label class="input-group">
+          <span class="input-group-icon">
+            {{ icon("admin-site-alt2") }}
+          </span>
+          <input type="text" class="form-control" aria-label="search">
+        </label>
+        <div class="whitelist-panel__form-help">
+          {{ icon("info") }}
+          IPv4 and IPv6 are acceptable.
+        </div>
+      </div>
+      <button class="btn btn-blue-40" type="submit">Add to Whitelist</button>
+    </form>
+  </div>
+</div>
